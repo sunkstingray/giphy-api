@@ -20,7 +20,16 @@
       <div class="jumbotron">
         <div class="container">
           <h1 class="display-3">Giphy Cartoon Finder</h1>
-          <p>Click on the buttons below to view selected category on Giphy. Use the form field to add additional cartoons.</p>
+          <p>Click on the buttons below to view selected category on Giphy. Use the form field to add additional buttons for other cartoons.</p>
+
+          <form class="form-inline">
+			  <label class="sr-only" for="newGif">Add New Category</label>
+			  <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0 w-75" id="newGif" placeholder="Add another cartoon category">
+
+			  <button type="submit" class="btn btn-primary" id="gifSubmit">Add</button>
+			</form>
+
+
           <div id="button-view"></div>
         </div>
       </div>
