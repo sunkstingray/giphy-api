@@ -1,0 +1,11 @@
+.btn {
+	margin: 5px;
+}
+
+.jumbotron {
+	background-image: url(../images/stewie.jpg);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-color: #edc39b;
+	padding-right: 190px;
+}
