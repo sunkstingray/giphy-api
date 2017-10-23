@@ -1,12 +1,10 @@
+// Set global variables
+
 var searchTerms = ["South Park","The Simpsons","Futurama","Family Guy","Adventure Time","Spongebob Squarepants","Minions"];
 
-for (var i = 0; i < searchTerms.length; i++) {
-	var a = $("<button>");
-	a.addClass("btn btn-dark giphy-go");
-	a.attr("data-name", searchTerms[i]);
-  	a.text(searchTerms[i]);
-  	$("#button-view").append(a);
-};
+
+
+// Function to get json and display gifs
 
 function displayGifs() {
 
@@ -47,16 +45,12 @@ function displayGifs() {
 	          $("#gif-view").prepend(gifFig);
         	}
 
-        		
-
-
 	        });
-
-        
 
 };
 
 
+// Function to toggle gifs from animate state to still state
 
 function animateGifs() {
 	var state = $(this).data("state");
@@ -72,6 +66,7 @@ function animateGifs() {
 
 };
 
+// Function to create new button from form and display current button set
 
 function addButton() {
 
@@ -86,6 +81,9 @@ function addButton() {
 };
 };
 
+
+// Click listener for form submit button
+
 $("#gifSubmit").on("click", function(event) {
         
         event.preventDefault();
@@ -99,6 +97,17 @@ $("#gifSubmit").on("click", function(event) {
         addButton();
       });
 
+
+// Click listener for buttons to get Giphy data
+
 $(document).on("click", ".giphy-go", displayGifs);
 
+
+// Click listener to trigger animation and still state in gifs
+
 $(document).on("click", ".gif", animateGifs);
+
+
+// Create initial set og buttons from global array
+
+addButton();
